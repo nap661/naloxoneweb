@@ -64,3 +64,31 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .legal{border-top:1px solid #1F2937;margin-top:18px;padding-top:12px;text-align:center}
 @media (max-width:1000px){.hero-grid{grid-template-columns:1fr}.cards-grid.three{grid-template-columns:1fr 1fr}.cards-grid.four{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.cta-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.kpis-grid{grid-template-columns:1fr}.cards-grid.three,.cards-grid.four{grid-template-columns:1fr}.menu{display:none;position:absolute;right:4%;top:64px;background:#fff;padding:14px;border-radius:12px;box-shadow:var(--shadow);flex-direction:column}.nav-toggle{display:block}.menu.open{display:flex}}
+/* ===== FINAL HERO COLOUR CORRECTION ===== */
+
+/* Hero background MUST be white */
+.hero {
+  background: #FFFFFF !important;
+}
+
+/* Left hero tile MUST be turquoise */
+.hero-tile.white {
+  background: #1CD8D2 !important; /* Tech Turquoise */
+  color: #0B1220 !important;
+}
+
+/* Hero heading inside turquoise tile */
+.hero-tile.white h1,
+.hero-tile.white p {
+  color: #0B1220 !important;
+}
+
+/* Right hero visual tile (the photo box) stays white */
+.hero-visual {
+  background: #FFFFFF !important;
+}
+
+/* The gradient circle inside hero visual */
+.hero-photo {
+  background: linear-gradient(45deg, #84FF1F, #1CD8D2) !important;
+}
