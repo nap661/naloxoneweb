@@ -1,4 +1,7 @@
 :root{
+  --orange: #FF940C;
+  --yellow: #F9D423;
+}:root{
   --bg:#FFFFFF; --text:#0B1220; --muted:#475569;
   --turq:#1CD8D2; --lime:#84FF1F; --blue:#005CFF; --magenta:#E756A5;
   --shadow:0 20px 40px rgba(2,6,23,.12), 0 8px 18px rgba(2,6,23,.08);
@@ -142,3 +145,33 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   background: #FFFFFF !important;
   border-radius: 20px !important;
 }
+/* HERO: gradient left tile, white page background, blue right tile */
+.hero { background: #FFFFFF !important; }
+
+.hero-tile.white{
+  background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 100%) !important;
+  color: #0B1220 !important;
+  border-radius: var(--radius) !important;
+  padding: 48px 40px !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.hero-visual{
+  background: var(--blue) !important; /* Electric Blue right tile */
+  border-radius: var(--radius) !important;
+  padding: 24px !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.hero-visual .hero-photo{
+  background: #FFFFFF !important;      /* white inner circle on blue */
+  border-radius: 20px !important;
+}
+/* Optional: gradient CTA button */
+.btn-gradient{
+  background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 100%) !important;
+  color:#0B1220 !important;
+  border:0 !important;
+  box-shadow: var(--shadow) !important;
+}
+.btn-gradient:hover{ filter:brightness(1.02); transform:translateY(-1px); }
