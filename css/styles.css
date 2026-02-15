@@ -92,3 +92,27 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .hero-photo {
   background: linear-gradient(45deg, #84FF1F, #1CD8D2) !important;
 }
+/* ===== FINALIZE HERO COLOURS ===== */
+
+/* Keep hero background white */
+.hero { background: #FFFFFF !important; }
+
+/* Left hero tile (the text tile) turquoise */
+.hero-tile.white {
+  background: #1CD8D2 !important; /* Tech Turquoise */
+  color: #0B1220 !important;
+}
+
+/* Right hero tile (photo box) ELECTRIC BLUE */
+.hero-visual {
+  background: #005CFF !important; /* Electric Blue */
+  border-radius: 22px !important;
+  padding: 20px 18px !important;
+  box-shadow: var(--shadow) !important;
+}
+
+/* Inner “photo” circle stays white so it pops on blue */
+.hero-photo {
+  background: #FFFFFF !important;
+  border-radius: 20px !important;
+}
