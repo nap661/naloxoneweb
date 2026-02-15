@@ -433,3 +433,40 @@ header,
 <title>Naloxone — MUSTARD TEST</title>
 /* TEMP: visual proof that /css/styles.css is active */
 body { outline: 3px solid hotpink !important; }
+/* === MUSTARD HEADER OVERRIDE (keep this at the very end) === */
+:root { 
+  --mustard: #FFDB58;  /* change to your brand mustard if different */
+  --ink: #1b1b1b;
+}
+
+/* Kill any overlays that might be painting green */
+header::before, header::after,
+.site-header::before, .site-header::after,
+.navbar::before, .navbar::after,
+.top-bar::before, .top-bar::after {
+  content: none !important;
+  background: none !important;
+}
+
+/* Hammer common header/nav wrappers */
+header,
+.site-header,
+.top-bar,
+.navbar,
+nav,
+nav.site-nav,
+nav[role="navigation"] {
+  background: var(--mustard) !important;
+  background-image: none !important;
+  color: var(--ink) !important;
+}
+
+/* Make sure links inside header stay readable */
+header a,
+.site-header a,
+.top-bar a,
+.navbar a,
+nav a {
+  color: var(--ink) !important;
+  text-decoration: none;
+}
