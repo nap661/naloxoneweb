@@ -7,6 +7,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=15" />
+  <style>
+  /* === Hard override for header/top bar === */
+  :root{
+    --mustard:#FFDB58;      /* TODO: change to your mustard hex */
+    --header-fg:#1b1b1b;    /* dark text for contrast */
+  }
+  header, .site-header, .top-bar, .navbar, nav[role="navigation"], nav.site-nav {
+    background: var(--mustard) !important;
+    background-image: none !important;
+    color: var(--header-fg) !important;
+  }
+  header a, .site-header a, .top-bar a, .navbar a, nav a, .nav-link, .menu a {
+    color: var(--header-fg) !important;
+    text-decoration: none;
+  }
+  .navbar a:hover, .menu a:hover, nav a:hover { color:#000 !important; }
+</style>
   <meta name="description" content="Free community naloxone training, overdose response resources, and harm reduction support across Plymouth & Devon.">
 </head>
 <body>
