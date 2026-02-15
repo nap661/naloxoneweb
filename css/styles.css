@@ -371,3 +371,20 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 @media (max-width: 1000px){
   .hero-grid{ grid-template-columns:1fr; }
 }
+/* Example mustard: #FFDB58 (or your own HEX) */
+header,
+.site-header,
+.top-bar,
+.navbar {
+  background-color: #FFDB58;   /* Mustard */
+  /* Optional for legibility */
+  color: #1b1b1b;              /* Dark text */
+}
+
+/* If your menu links need forcing */
+.navbar a,
+.site-header a,
+.top-bar a {
+  color: #1b1b1b;               /* or #000 */
+}
+.navbar a:hover { color: #000; }
