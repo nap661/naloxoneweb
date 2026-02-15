@@ -1,475 +1,163 @@
-:root{
-  --orange: #FF940C;
-  --yellow: #F9D423;
-}:root{
-  --bg:#FFFFFF; --text:#0B1220; --muted:#475569;
-  --turq:#1CD8D2; --lime:#84FF1F; --blue:#005CFF; --magenta:#E756A5;
-  --shadow:0 20px 40px rgba(2,6,23,.12), 0 8px 18px rgba(2,6,23,.08);
-  --radius:22px;
-}
-*{box-sizing:border-box} html,body{margin:0;padding:0}
-body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
-.container{width:min(1120px,92%);margin-inline:auto}
-.center{text-align:center} .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
-.topband{background:#FFDB58} .topband .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.brand{display:flex;gap:10px;align-items:center;color:inherit;text-decoration:none;font-weight:800}
-.logo-dot{width:18px;height:18px;border-radius:50%;background:var(--turq);display:inline-block;margin-right:6px}
-.menu{display:flex;gap:18px;align-items:center} .menu a{color:#111827;text-decoration:none;font-weight:700;opacity:.95}
-.nav-toggle{display:none;background:none;border:none} .nav-toggle span{display:block;width:24px;height:2px;background:#111;margin:5px 0}
-.btn{display:inline-block;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:800;border:2px solid transparent}
-.btn-dark{background:#111827;color:#fff}
-.btn-ghost{background:#fff;color:#111;border:2px solid #E5E7EB;box-shadow:var(--shadow)}
-.btn-turq{background:var(--turq);color:#0B1220;box-shadow:var(--shadow)}
-.btn-lime{background:var(--lime);color:#0B1220;box-shadow:var(--shadow)}
-.btn-blue{background:var(--blue);color:#fff;box-shadow:var(--shadow)}
-.btn-magenta{background:var(--magenta);color:#fff;box-shadow:var(--shadow)}
-.hero{background:var(--turq);padding:56px 0 46px}
-.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:26px;align-items:center}
-.hero-tile.white{background:#fff;border-radius:var(--radius);padding:34px 30px;box-shadow:var(--shadow)}
-.hero-tile h1{font-family:Poppins,sans-serif;font-size:44px;line-height:1.12;margin:0 0 10px}
-.hero-visual{background:#fff;border-radius:var(--radius);padding:20px 18px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center}
-.hero-photo{width:260px;height:260px;border-radius:20px;background:linear-gradient(45deg,var(--lime),var(--turq));}
-.social-dots{display:flex;gap:12px;margin-top:14px}
-.dot{display:inline-block;width:14px;height:14px;border-radius:50%}
-.dot.magenta{background:var(--magenta)} .dot.lime{background:var(--lime)} .dot.turq{background:var(--turq)} .dot.blue{background:var(--blue)}
-.kpis{background:var(--blue);color:#fff;padding:18px 0}
-.kpis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.kpi{display:flex;flex-direction:column;align-items:center;gap:4px} .kpi strong{font-size:28px}
-.section{padding:56px 0} .section-head{text-align:center;max-width:780px;margin:0 auto 24px} .eyebrow{display:inline-block;background:#EEF2FF;padding:6px 10px;border-radius:999px;font-weight:700;font-size:12px}
-.cards-grid{display:grid;gap:18px} .cards-grid.three{grid-template-columns:repeat(3,1fr)} .cards-grid.four{grid-template-columns:repeat(4,1fr)}
-.card{background:#fff;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);outline:1px solid rgba(15,23,42,.06)}
-.card.training .card-top{display:flex;gap:8px;margin:-6px 0 8px}
-.badge{font-size:12px;padding:6px 10px;border-radius:999px;font-weight:700;border:1px solid rgba(0,0,0,.08)}
-.badge.live{background:#14BFA0;color:#fff} .badge.open{background:var(--blue);color:#fff}
-.card.training .meta{display:flex;gap:12px;color:#475569;font-size:14px;margin:12px 0 16px}
-.card.feature .icon{display:inline-block;width:52px;height:52px;border-radius:12px;line-height:52px;text-align:center;color:#fff;margin-bottom:12px}
-.tint-lime .icon{background:var(--lime)} .tint-turq .icon{background:var(--turq)} .tint-blue .icon{background:var(--blue)}
-.steps{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}
-.step{border-radius:var(--radius);padding:22px;color:#fff;box-shadow:var(--shadow)}
-.step.turq{background:var(--turq)} .step.magenta{background:var(--magenta)}
-.badge-num{width:34px;height:34px;border-radius:50%;background:#fff;color:#111;display:inline-flex;align-items:center;justify-content:center;font-weight:900;margin-bottom:8px}
-.alert{background:#F3C623;padding:16px;border-radius:14px;text-align:center;margin-top:18px;font-weight:800;border:2px solid rgba(0,0,0,.06)}
-.gradient.purple{background:linear-gradient(180deg,#E756A5 0%, #005CFF 100%);padding:56px 0;color:#fff}
-.gradient.purple .card.role{background:#fff;color:#0B1220}
-.news .thumb{width:100%;height:150px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--turq))}
-.testimonials.gradient.blue{background:linear-gradient(180deg, var(--blue) 0%, var(--turq) 100%);padding:56px 0}
-.testimonials .card.quote{background:#fff}
-.stars{color:#F5C739}
-.cta{padding:48px 0 0;background:linear-gradient(180deg,#FDF6B2 0%, #EAF7C8 100%)}
-.cta-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:center}
-.cta-bottom{margin-top:24px;background:#111827;color:#fff;text-align:center;padding:16px;font-weight:900;letter-spacing:.5px}
-.footer{background:#0B1220;color:#E2E8F0;padding:40px 0 20px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:24px}
-.footer a{color:#E2E8F0;text-decoration:none}
-.footer .signup{display:flex;gap:8px;margin-top:8px}
-.footer input{flex:1;padding:10px 12px;border-radius:12px;border:1px solid #334155;background:#0F172A;color:#fff;height:42px}
-.footer .btn-dark{height:42px;padding:0 14px}
-.legal{border-top:1px solid #1F2937;margin-top:18px;padding-top:12px;text-align:center}
-@media (max-width:1000px){.hero-grid{grid-template-columns:1fr}.cards-grid.three{grid-template-columns:1fr 1fr}.cards-grid.four{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.cta-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.kpis-grid{grid-template-columns:1fr}.cards-grid.three,.cards-grid.four{grid-template-columns:1fr}.menu{display:none;position:absolute;right:4%;top:64px;background:#fff;padding:14px;border-radius:12px;box-shadow:var(--shadow);flex-direction:column}.nav-toggle{display:block}.menu.open{display:flex}}
-/* ===== FINAL HERO COLOUR CORRECTION ===== */
+/* ================================
+   Naloxone Advocates – Global Styles
+   Last updated: 2026-02-15
+   Notes:
+   - Keep the Theme block (colours) at the top.
+   - Add new section styles below the Layout section.
+   ================================ */
 
-/* Hero background MUST be white */
-.hero {
-  background: #FFFFFF !important;
+/* ----------------
+   Theme (edit here)
+   ---------------- */
+:root {
+  /* Brand colours */
+  --mustard: #FFDB58;   /* Header / accent (update to your exact brand mustard if needed) */
+  --ink:     #1b1b1b;   /* Default text colour */
+  --bg:      #ffffff;   /* Page background */
+
+  /* Optional extended palette */
+  --ink-strong: #000000;
+  --ink-muted:  #444;
+  --border:     #e6e6e6;
+  --link:       #1b1b1b; /* Links on mustard header stay dark for contrast */
+  --link-hover: #000000;
 }
 
-/* Left hero tile MUST be turquoise */
-.hero-tile.white {
-  background: #1CD8D2 !important; /* Tech Turquoise */
-  color: #0B1220 !important;
+/* --------------
+   Reset / Basics
+   -------------- */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Hero heading inside turquoise tile */
-.hero-tile.white h1,
-.hero-tile.white p {
-  color: #0B1220 !important;
+img, svg, video { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-underline-offset: 2px; }
+
+/* -------------
+   Layout helpers
+   ------------- */
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-/* Right hero visual tile (the photo box) stays white */
-.hero-visual {
-  background: #FFFFFF !important;
+/* -------------
+   Header / Nav
+   ------------- */
+/* Use .site-header on your <header> element */
+.site-header {
+  background: var(--mustard);
+  color: var(--ink);
 }
 
-/* The gradient circle inside hero visual */
-.hero-photo {
-  background: linear-gradient(45deg, #84FF1F, #1CD8D2) !important;
-}
-/* ===== FINALIZE HERO COLOURS ===== */
-
-/* Keep hero background white */
-.hero { background: #FFFFFF !important; }
-
-/* Left hero tile (the text tile) turquoise */
-.hero-tile.white {
-  background: #1CD8D2 !important; /* Tech Turquoise */
-  color: #0B1220 !important;
+/* Header content layout */
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  gap: 16px;
 }
 
-/* Right hero tile (photo box) ELECTRIC BLUE */
-.hero-visual {
-  background: #005CFF !important; /* Electric Blue */
-  border-radius: 22px !important;
-  padding: 20px 18px !important;
-  box-shadow: var(--shadow) !important;
-}
-
-/* Inner “photo” circle stays white so it pops on blue */
-.hero-photo {
-  background: #FFFFFF !important;
-  border-radius: 20px !important;
-}
-/* === FINAL HERO FIX — RIGHT TILE ELECTRIC BLUE === */
-
-/* Hero background stays white */
-.hero {
-  background: #FFFFFF !important;
-}
-
-/* Left tile turquoise (already correct) */
-.hero-tile.white {
-  background: #1CD8D2 !important; /* Tech Turquoise */
-  color: #0B1220 !important;
-}
-
-/* RIGHT TILE = ELECTRIC BLUE */
-.hero-visual {
-  background: #005CFF !important; /* ELECTRIC BLUE */
-  border-radius: 22px !important;
-  padding: 24px !important;
-  box-shadow: 0 22px 44px rgba(0,0,0,.16) !important;
-}
-
-/* Inner circle stays white */
-.hero-photo {
-  background: #FFFFFF !important;
-  border-radius: 20px !important;
-}
-/* HERO: gradient left tile, white page background, blue right tile */
-.hero { background: #FFFFFF !important; }
-
-.hero-tile.white{
-  background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 100%) !important;
-  color: #0B1220 !important;
-  border-radius: var(--radius) !important;
-  padding: 48px 40px !important;
-  box-shadow: var(--shadow) !important;
-}
-
-.hero-visual{
-  background: var(--blue) !important; /* Electric Blue right tile */
-  border-radius: var(--radius) !important;
-  padding: 24px !important;
-  box-shadow: var(--shadow) !important;
-}
-
-.hero-visual .hero-photo{
-  background: #FFFFFF !important;      /* white inner circle on blue */
-  border-radius: 20px !important;
-}
-/* Optional: gradient CTA button */
-.btn-gradient{
-  background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 100%) !important;
-  color:#0B1220 !important;
-  border:0 !important;
-  box-shadow: var(--shadow) !important;
-}
-.btn-gradient:hover{ filter:brightness(1.02); transform:translateY(-1px); }
-/* === HERO: final, consolidated (no duplicates, no bleed) === */
-
-/* Base hero background */
-.hero {
-  background: #FFFFFF !important;
-}
-
-/* LEFT hero tile — orange → yellow gradient */
-.hero-tile.white{
-  background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 100%) !important;
-  color: #0B1220 !important;
-  border-radius: var(--radius) !important;
-  padding: 48px 40px !important;
-  box-shadow: var(--shadow) !important;
-}
-
-/* RIGHT hero tile — Electric Blue */
-.hero-visual{
-  background: var(--blue) !important; /* #005CFF */
-  border-radius: var(--radius) !important;
-  padding: 24px !important;
-  box-shadow: var(--shadow) !important;
-}
-
-/* Inner photo “circle” stays white on blue */
-.hero-visual .hero-photo{
-  background: #FFFFFF !important;
-  border-radius: 20px !important;
-}
-
-/* CTA (optional) — gradient button */
-.btn-gradient{
-  background: linear-gradient(135deg, var(--orange) 0%, var(--yellow) 100%) !important;
-  color:#0B1220 !important;
-  border:0 !important;
-  box-shadow: var(--shadow) !important;
-}
-.btn-gradient:hover{
-  filter:brightness(1.02);
-  transform:translateY(-1px);
-}
-.topband {
-  background: #005CFF !important; /* Electric Blue */
-}
-/* === TOP BANNER SAFETY YELLOW === */
-.topband {
-  background: #FFEB3B !important; /* Safety Yellow */
-}
-
-/* Make sure text stays readable on yellow */
-.topband .menu a,
-.topband .brand span {
-  color: #0B1220 !important; /* dark navy text for contrast */
-}
-/* === TOP BANNER FRESH GREEN === */
-.topband {
-  background: #32CD32 !important;
-}
-
-/* Make text navy for readability */
-.topband .menu a,
-.topband .brand span {
-  color: #0B1220 !important;
-}
-/* === HERO LEFT TILE: Readdy gradient === */
-.hero-tile.white {
-  background: linear-gradient(to bottom right, #FACC15, #A3E635) !important;
-  color: #0B1220 !important;
-  border-radius: 22px !important;
-  padding: 48px 40px !important;
-  box-shadow: var(--shadow) !important;
-}
-/* RIGHT hero tile: Electric Blue background, white inner circle */
-.hero-visual{
-  background: #005CFF !important;
-  border-radius: 22px !important;
-  padding: 24px !important;
-  box-shadow: 0 22px 44px rgba(0,0,0,.16) !important;
-}
-.hero-visual .hero-photo{
-  background: #FFFFFF !important;
-  border-radius: 20px !important;
-}
-.hero-tile.white{
-  /* keep the gradient above */
-  box-shadow:
-    var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000),
-    0 25px 50px -12px rgba(0,0,0,.25) !important;
-}
-/* =========================================================
-   HERO — Exact match to Readdy tile
-   - Left tile: gradient → bottom-right (yellow-400 → lime-400)
-   - Spacing: p-12 (48px), rounded-3xl (24px)
-   - Shadow: ~ Tailwind shadow-2xl
-   - Headline sizes: 5xl / 6xl equivalent
-   - Buttons: pink primary + white/blue secondary
-   ========================================================= */
-
-/* Keep hero background white */
-.hero { background: #FFFFFF !important; }
-
-/* === LEFT HERO TILE (gradient + radius + spacing + shadow) === */
-.hero-tile.white{
-  /* Tailwind: bg-gradient-to-br from-yellow-400 to-lime-400 */
-  background-image: linear-gradient(to bottom right, #FACC15, #A3E635) !important;
-  border-radius: 24px !important;     /* rounded-3xl */
-  padding: 48px !important;           /* p-12 */
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25) !important; /* shadow-2xl */
-  color: #0B1220 !important;
-}
-
-/* Headline + body text sizing like text-5xl / text-6xl / text-xl */
-.hero-tile.white h1{
-  font-family: Poppins, system-ui, sans-serif;
-  font-weight: 700;                    /* font-bold */
-  line-height: 1.15;                   /* leading-tight-ish */
-  margin: 0 0 24px;                    /* mb-6 */
-  font-size: 3rem;                     /* text-5xl base */
-}
-@media (min-width: 768px){             /* md: breakpoint */
-  .hero-tile.white h1{ font-size: 3.75rem; } /* text-6xl */
-}
-
-.hero-tile.white p{
-  font-size: 1.25rem;                  /* text-xl */
-  font-weight: 600;                    /* font-semibold */
-  color: #FFFFFF;                      /* white on gradient */
-  margin: 0 0 32px;                    /* mb-8 */
-}
-
-/* Make the action row behave like flex-col sm:flex-row gap-4 */
-.hero-tile .actions{
-  display: flex; gap: 16px; flex-direction: column;
-}
-@media (min-width: 640px){
-  .hero-tile .actions{ flex-direction: row; }
-}
-
-/* === RIGHT HERO TILE (Electric Blue card + white inner circle) === */
-.hero-visual{
-  background: #005CFF !important;
-  border-radius: 24px !important;
-  padding: 24px !important;
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25) !important;
-  display: flex; flex-direction: column; align-items: center;
-}
-.hero-visual .hero-photo{
-  width: 260px; height: 260px; border-radius: 20px;
-  background: #FFFFFF;                 /* white circular/rounded block */
-}
-
-/* Social dots under image (spacing like your preview) */
-.hero .social-dots{ display:flex; gap:16px; margin-top:20px; }
-.hero .social-dots .dot{ width:14px; height:14px; border-radius:50%; }
-.hero .social-dots .dot.magenta{ background:#E756A5; }
-.hero .social-dots .dot.lime{    background:#A3E635; }
-.hero .social-dots .dot.turq{    background:#1CD8D2; }
-.hero .social-dots .dot.blue{    background:#005CFF; }
-
-/* === BUTTONS to match preview === */
-
-/* Primary (pink solid) → "bg-pink-500 hover:bg-pink-600 text-white" */
-.btn-pink{
-  background:#EC4899;                  /* Tailwind pink-500 */
-  color:#FFFFFF; font-weight:700;      /* font-bold */
-  padding: 16px 32px;                  /* px-8 py-4 */
-  border-radius: 999px;                /* rounded-full */
-  box-shadow: 0 10px 24px rgba(0,0,0,.12);
-  text-decoration:none; display:inline-flex;
-  align-items:center; justify-content:center;
-  white-space:nowrap; transition:all .15s ease;
-}
-.btn-pink:hover{ background:#DB2777; } /* pink-600 */
-
-/* Secondary (white with blue text) → "bg-white text-blue-500 hover:bg-gray-100" */
-.btn-white-blue{
-  background:#FFFFFF; color:#3B82F6;   /* Tailwind blue-500 for text */
-  font-weight:700; padding:16px 32px; border-radius:999px;
-  box-shadow: 0 10px 24px rgba(0,0,0,.12);
-  text-decoration:none; display:inline-flex;
-  align-items:center; justify-content:center;
-  white-space:nowrap; transition:all .15s ease;
-}
-.btn-white-blue:hover{ background:#F3F4F6; } /* gray-100 */
-
-/* Optional: right-pointing arrow spacing (if using icon fonts) */
-.btn-pink i, .btn-white-blue i{ margin-left:8px; }
-
-/* Ensure hero grid resembles your layout proportions */
-.hero-grid{
-  display:grid; grid-template-columns: 1.5fr 1fr; gap:32px; align-items:center;
-}
-@media (max-width: 1000px){
-  .hero-grid{ grid-template-columns:1fr; }
-}
-/* Example mustard: #FFDB58 (or your own HEX) */
-header,
-.site-header,
-.top-bar,
-.navbar {
-  background-color: #FFDB58;   /* Mustard */
-  /* Optional for legibility */
-  color: #1b1b1b;              /* Dark text */
-}
-
-/* If your menu links need forcing */
-.navbar a,
-.site-header a,
-.top-bar a {
-  color: #1b1b1b;               /* or #000 */
-}
-.navbar a:hover { color: #000; }
-/* === Header mustard override === */
-:root{
-  --mustard: #FFDB58;   /* TODO: change to your brand mustard */
-  --header-fg: #1b1b1b; /* dark text for good contrast on mustard */
-}
-
-/* Common header/nav wrappers */
-header,
-.site-header,
-.top-bar,
-.navbar,
-nav[role="navigation"],
-nav.site-nav {
-  background: var(--mustard) !important;
-  color: var(--header-fg) !important;
-}
-
-/* Make sure the nav links are readable */
-header a,
-.site-header a,
-.top-bar a,
-.navbar a,
-nav a,
-.nav-link,
-.menu a {
-  color: var(--header-fg) !important;
+/* Branding */
+.brand {
+  font-weight: 700;
+  letter-spacing: .2px;
   text-decoration: none;
+  color: var(--ink);
 }
 
-.navbar a:hover,
-.menu a:hover,
-nav a:hover { color: #000 !important; }
-
-/* Remove any theme gradient/shadow that might mask the colour */
-header,
-.site-header,
-.top-bar,
-.navbar {
-  background-image: none !important;
-  box-shadow: none; /* optional */
-}
-.top-bar     { background-color: #FFDB58 !important; color: #1b1b1b !important; }
-<title>Naloxone — MUSTARD TEST</title>
-/* TEMP: visual proof that /css/styles.css is active */
-body { outline: 3px solid hotpink !important; }
-/* === MUSTARD HEADER OVERRIDE (keep this at the very end) === */
-:root { 
-  --mustard: #FFDB58;  /* change to your brand mustard if different */
-  --ink: #1b1b1b;
-}
-
-/* Kill any overlays that might be painting green */
-header::before, header::after,
-.site-header::before, .site-header::after,
-.navbar::before, .navbar::after,
-.top-bar::before, .top-bar::after {
-  content: none !important;
-  background: none !important;
-}
-
-/* Hammer common header/nav wrappers */
-header,
-.site-header,
-.top-bar,
-.navbar,
-nav,
-nav.site-nav,
-nav[role="navigation"] {
-  background: var(--mustard) !important;
-  background-image: none !important;
-  color: var(--ink) !important;
-}
-
-/* Make sure links inside header stay readable */
-header a,
-.site-header a,
-.top-bar a,
-.navbar a,
-nav a {
-  color: var(--ink) !important;
+/* Nav */
+.nav a {
+  color: var(--link);
   text-decoration: none;
+  margin-left: 16px;
+  white-space: nowrap;
 }
-:root { --mustard:#FFDB58; --ink:#1b1b1b; }
-.site-header { background: var(--mustard); color: var(--ink); }
-.site-header a { color: var(--ink); }
+
+.nav a:hover,
+.nav a:focus {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Mobile adjustments */
+@media (max-width: 720px) {
+  .site-header .wrap {
+    flex-wrap: wrap;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    padding: 6px 0 2px;
+  }
+  .nav a {
+    margin: 0;
+  }
+}
+
+/* --------------------
+   Main content & blocks
+   -------------------- */
+.container {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+h1, h2, h3 {
+  color: var(--ink-strong);
+  line-height: 1.25;
+  margin: 0 0 .6em;
+}
+p { margin: 0 0 1em; color: var(--ink); }
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 24px 0;
+}
+
+/* -----------
+   Footer (opt)
+   ----------- */
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--ink-muted);
+  padding: 16px 0 24px;
+  font-size: 0.95rem;
+}
+
+/* -----------------------------------------
+   Optional safety: kill legacy header overlays
+   Uncomment only if you see a tinted overlay
+   ----------------------------------------- */
+/*
+.site-header::before,
+.site-header::after {
+  content: none;
+  background: none;
+}
+*/
+
+/* -----------------------
+   Utilities (add as needed)
+   ----------------------- */
+.text-center { text-align: center; }
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: .5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
