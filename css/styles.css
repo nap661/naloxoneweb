@@ -470,3 +470,6 @@ nav a {
   color: var(--ink) !important;
   text-decoration: none;
 }
+:root { --mustard:#FFDB58; --ink:#1b1b1b; }
+.site-header { background: var(--mustard); color: var(--ink); }
+.site-header a { color: var(--ink); }
