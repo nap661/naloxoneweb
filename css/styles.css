@@ -247,3 +247,21 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   padding: 48px 40px !important;
   box-shadow: var(--shadow) !important;
 }
+/* RIGHT hero tile: Electric Blue background, white inner circle */
+.hero-visual{
+  background: #005CFF !important;
+  border-radius: 22px !important;
+  padding: 24px !important;
+  box-shadow: 0 22px 44px rgba(0,0,0,.16) !important;
+}
+.hero-visual .hero-photo{
+  background: #FFFFFF !important;
+  border-radius: 20px !important;
+}
+.hero-tile.white{
+  /* keep the gradient above */
+  box-shadow:
+    var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000),
+    0 25px 50px -12px rgba(0,0,0,.25) !important;
+}
