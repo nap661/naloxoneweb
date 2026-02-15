@@ -216,3 +216,6 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   filter:brightness(1.02);
   transform:translateY(-1px);
 }
+.topband {
+  background: #005CFF !important; /* Electric Blue */
+}
