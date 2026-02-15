@@ -116,3 +116,29 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   background: #FFFFFF !important;
   border-radius: 20px !important;
 }
+/* === FINAL HERO FIX — RIGHT TILE ELECTRIC BLUE === */
+
+/* Hero background stays white */
+.hero {
+  background: #FFFFFF !important;
+}
+
+/* Left tile turquoise (already correct) */
+.hero-tile.white {
+  background: #1CD8D2 !important; /* Tech Turquoise */
+  color: #0B1220 !important;
+}
+
+/* RIGHT TILE = ELECTRIC BLUE */
+.hero-visual {
+  background: #005CFF !important; /* ELECTRIC BLUE */
+  border-radius: 22px !important;
+  padding: 24px !important;
+  box-shadow: 0 22px 44px rgba(0,0,0,.16) !important;
+}
+
+/* Inner circle stays white */
+.hero-photo {
+  background: #FFFFFF !important;
+  border-radius: 20px !important;
+}
