@@ -265,3 +265,109 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
     var(--tw-ring-shadow, 0 0 #0000),
     0 25px 50px -12px rgba(0,0,0,.25) !important;
 }
+/* =========================================================
+   HERO — Exact match to Readdy tile
+   - Left tile: gradient → bottom-right (yellow-400 → lime-400)
+   - Spacing: p-12 (48px), rounded-3xl (24px)
+   - Shadow: ~ Tailwind shadow-2xl
+   - Headline sizes: 5xl / 6xl equivalent
+   - Buttons: pink primary + white/blue secondary
+   ========================================================= */
+
+/* Keep hero background white */
+.hero { background: #FFFFFF !important; }
+
+/* === LEFT HERO TILE (gradient + radius + spacing + shadow) === */
+.hero-tile.white{
+  /* Tailwind: bg-gradient-to-br from-yellow-400 to-lime-400 */
+  background-image: linear-gradient(to bottom right, #FACC15, #A3E635) !important;
+  border-radius: 24px !important;     /* rounded-3xl */
+  padding: 48px !important;           /* p-12 */
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25) !important; /* shadow-2xl */
+  color: #0B1220 !important;
+}
+
+/* Headline + body text sizing like text-5xl / text-6xl / text-xl */
+.hero-tile.white h1{
+  font-family: Poppins, system-ui, sans-serif;
+  font-weight: 700;                    /* font-bold */
+  line-height: 1.15;                   /* leading-tight-ish */
+  margin: 0 0 24px;                    /* mb-6 */
+  font-size: 3rem;                     /* text-5xl base */
+}
+@media (min-width: 768px){             /* md: breakpoint */
+  .hero-tile.white h1{ font-size: 3.75rem; } /* text-6xl */
+}
+
+.hero-tile.white p{
+  font-size: 1.25rem;                  /* text-xl */
+  font-weight: 600;                    /* font-semibold */
+  color: #FFFFFF;                      /* white on gradient */
+  margin: 0 0 32px;                    /* mb-8 */
+}
+
+/* Make the action row behave like flex-col sm:flex-row gap-4 */
+.hero-tile .actions{
+  display: flex; gap: 16px; flex-direction: column;
+}
+@media (min-width: 640px){
+  .hero-tile .actions{ flex-direction: row; }
+}
+
+/* === RIGHT HERO TILE (Electric Blue card + white inner circle) === */
+.hero-visual{
+  background: #005CFF !important;
+  border-radius: 24px !important;
+  padding: 24px !important;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,.25) !important;
+  display: flex; flex-direction: column; align-items: center;
+}
+.hero-visual .hero-photo{
+  width: 260px; height: 260px; border-radius: 20px;
+  background: #FFFFFF;                 /* white circular/rounded block */
+}
+
+/* Social dots under image (spacing like your preview) */
+.hero .social-dots{ display:flex; gap:16px; margin-top:20px; }
+.hero .social-dots .dot{ width:14px; height:14px; border-radius:50%; }
+.hero .social-dots .dot.magenta{ background:#E756A5; }
+.hero .social-dots .dot.lime{    background:#A3E635; }
+.hero .social-dots .dot.turq{    background:#1CD8D2; }
+.hero .social-dots .dot.blue{    background:#005CFF; }
+
+/* === BUTTONS to match preview === */
+
+/* Primary (pink solid) → "bg-pink-500 hover:bg-pink-600 text-white" */
+.btn-pink{
+  background:#EC4899;                  /* Tailwind pink-500 */
+  color:#FFFFFF; font-weight:700;      /* font-bold */
+  padding: 16px 32px;                  /* px-8 py-4 */
+  border-radius: 999px;                /* rounded-full */
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  text-decoration:none; display:inline-flex;
+  align-items:center; justify-content:center;
+  white-space:nowrap; transition:all .15s ease;
+}
+.btn-pink:hover{ background:#DB2777; } /* pink-600 */
+
+/* Secondary (white with blue text) → "bg-white text-blue-500 hover:bg-gray-100" */
+.btn-white-blue{
+  background:#FFFFFF; color:#3B82F6;   /* Tailwind blue-500 for text */
+  font-weight:700; padding:16px 32px; border-radius:999px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  text-decoration:none; display:inline-flex;
+  align-items:center; justify-content:center;
+  white-space:nowrap; transition:all .15s ease;
+}
+.btn-white-blue:hover{ background:#F3F4F6; } /* gray-100 */
+
+/* Optional: right-pointing arrow spacing (if using icon fonts) */
+.btn-pink i, .btn-white-blue i{ margin-left:8px; }
+
+/* Ensure hero grid resembles your layout proportions */
+.hero-grid{
+  display:grid; grid-template-columns: 1.5fr 1fr; gap:32px; align-items:center;
+}
+@media (max-width: 1000px){
+  .hero-grid{ grid-template-columns:1fr; }
+}
