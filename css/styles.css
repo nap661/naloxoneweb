@@ -388,3 +388,45 @@ header,
   color: #1b1b1b;               /* or #000 */
 }
 .navbar a:hover { color: #000; }
+/* === Header mustard override === */
+:root{
+  --mustard: #FFDB58;   /* TODO: change to your brand mustard */
+  --header-fg: #1b1b1b; /* dark text for good contrast on mustard */
+}
+
+/* Common header/nav wrappers */
+header,
+.site-header,
+.top-bar,
+.navbar,
+nav[role="navigation"],
+nav.site-nav {
+  background: var(--mustard) !important;
+  color: var(--header-fg) !important;
+}
+
+/* Make sure the nav links are readable */
+header a,
+.site-header a,
+.top-bar a,
+.navbar a,
+nav a,
+.nav-link,
+.menu a {
+  color: var(--header-fg) !important;
+  text-decoration: none;
+}
+
+.navbar a:hover,
+.menu a:hover,
+nav a:hover { color: #000 !important; }
+
+/* Remove any theme gradient/shadow that might mask the colour */
+header,
+.site-header,
+.top-bar,
+.navbar {
+  background-image: none !important;
+  box-shadow: none; /* optional */
+}
+.top-bar     { background-color: #FFDB58 !important; color: #1b1b1b !important; }
